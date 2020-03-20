@@ -2,6 +2,9 @@ import React from 'react'
 import {View,Text,Button} from 'react-native';
 
 const Feed = ({navigation})=> {
+    navigation.setOptions({
+        headerRight: () => <Button title="Go" onPress={() => navigation.navigate("Details",{Name:"Dee"})}/>
+    })
     return (
         <View>
             <Text>Feed</Text>

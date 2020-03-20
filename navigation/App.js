@@ -25,7 +25,13 @@ const MaterialTopTabs = createMaterialTopTabNavigator();
 const App = () =>{
 
  const createHomeStack = () => 
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        gestureEnabled:true,
+        gestureDirection: "horizontal",
+      }}
+      headerMode="float"
+    >
       <Stack.Screen name="Feed" component={Feed} 
         options={{
           title:"MY FEED",
